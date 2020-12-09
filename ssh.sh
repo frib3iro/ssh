@@ -28,6 +28,7 @@ echo -e "${seta} ${ciano}Mostrando o ip${fim}"
 echo
 echo -e "${seta} ${ciano}Copie o ip para fazer a conexão entre as máquinas${fim}"
 ip address show
+
+echo -e "${seta} ${verde}Para se conectar digite >>> ssh usuario@IP <<<${fim}"
 read
-clear
 
