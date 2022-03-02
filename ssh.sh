@@ -29,5 +29,5 @@ echo
 echo -e "${S} ${C}Copie o ip para fazer a conexão entre as máquinas${F}"
 ip address show
 
-echo -e "${S} ${G}Para se conectar digite >>> ssh usuario@IP <<<${F}"
+echo -e "${S} ${G}Para se conectar digite${F} ${R}[${F}${C}ssh usuario@IP${F}${R}]${F}"
 
