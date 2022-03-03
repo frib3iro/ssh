@@ -21,7 +21,7 @@ clear
 
 echo -e "${S} ${C}Reiniciando o serviço sshd${F}"
 sleep 2s
-systemctl restart sshd
+sudo systemctl restart sshd
 clear
 
 echo -e "${S} ${C}Mostrando o ip${F}"
