@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# variaveis e password root/user
+# variaveis 
 C='\033[0;36m'
 G='\033[0;32m'
 R='\033[0;31m'
