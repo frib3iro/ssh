@@ -6,7 +6,7 @@ G='\033[0;32m'
 R='\033[0;31m'
 Y='\033[0;32m'
 F='\033[0m'
-S='\e[32;1m[+]\e[m'
+S='\e[32;1m>>>\e[m'
 
 clear
 echo -e "${S} ${C}Instalando o openssh${F}"
