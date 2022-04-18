@@ -1,33 +1,32 @@
 #!/usr/bin/env bash
 
-# variaveis 
-C='\033[0;36m'
-G='\033[0;32m'
-R='\033[0;31m'
-Y='\033[0;32m'
-F='\033[0m'
-S='\e[32;1m>>>\e[m'
+# variaveis
+r='\e[31m'
+g='\e[32m'
+b='\e[34m'
+f='\e[m'
+s='\e[35m>>>\e[m'
 
 clear
-echo -e "${S} ${C}Instalando o openssh${F}"
+echo -e "${s} ${b}Instalando o openssh${f}"
 sleep 2s
 sudo pacman -S openssh --noconfirm
-clear
 
-echo -e "${S} ${C}Abrindo a porta 22${F}"
+echo -e "${s} ${b}Abrindo a porta 22${f}"
 sleep 2s
 sed -i 's/#Port 22/Port 22/' /etc/ssh/sshd_config
-clear
 
-echo -e "${S} ${C}Reiniciando o serviço sshd${F}"
+echo -e "${s} ${b}Reiniciando o serviço sshd${f}"
 sleep 2s
 sudo systemctl restart sshd
-clear
 
-echo -e "${S} ${C}Mostrando o ip${F}"
+echo -e "${s} ${b}Mostrando o ip${f}"
 echo
-echo -e "${S} ${C}Copie o ip para fazer a conexão entre as máquinas${F}"
+
+echo -e "${s} ${b}Copie o ip para fazer a conexão entre as máquinas${f}"
+echo
 ip -br -c a
 
-echo -e "${S} ${G}Para se conectar digite${F} ${R}[${F}${C}ssh usuario@IP${F}${R}]${F}"
+echo
+echo -e "${s} ${g}Para se conectar digite${f} ${r}[${f}${b}ssh usuario@IP${f}${r}]${f}"
 
