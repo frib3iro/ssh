@@ -12,19 +12,21 @@ echo -e "${s} ${b}Instalando o openssh${f}"
 sleep 2s
 sudo pacman -S openssh --noconfirm
 
+echo
 echo -e "${s} ${b}Abrindo a porta 22${f}"
 sleep 2s
-sed -i 's/#Port 22/Port 22/' /etc/ssh/sshd_config
+sudo sed -i 's/#Port 22/Port 22/' /etc/ssh/sshd_config
 
+echo
 echo -e "${s} ${b}Reiniciando o serviço sshd${f}"
 sleep 2s
 sudo systemctl restart sshd
 
+echo
 echo -e "${s} ${b}Mostrando o ip${f}"
-echo
 
-echo -e "${s} ${b}Copie o ip para fazer a conexão entre as máquinas${f}"
 echo
+echo -e "${s} ${b}Copie o ip para fazer a conexão entre as máquinas${f}"
 ip -br -c a
 
 echo
